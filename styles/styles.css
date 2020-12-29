@@ -67,6 +67,8 @@ li{
 
 body{
   font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -151,14 +153,13 @@ body{
 .slider{
   display: flex;
   transition: all 0.5s;
-  transform: translateX(-300%);
+  transform: translateX(-100%);
 } 
 
 
 .slider>.slider__item{
-  min-width: 100vw;
-  max-height: 550px;
-  
+  min-width: 100%;
+  max-height: 450px;
 }  
 
 .slider__item img{
