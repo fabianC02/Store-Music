@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     
     <!-- Styles Reset -->
@@ -17,7 +17,7 @@
 
 </head>
 <body>
-
+    
     
     <!-- Header Page -->
     <header class="main-header">
@@ -34,10 +34,11 @@
 
                         <nav class="nav">
                             <ul class="nav-items">
-                                <li>Inicio</li>
-                                <li>Quienes Somos</li>
-                                <li>Contacto</li>
-                                <li>Productos</li>
+                                <li class="item">Inicio</li>
+                                <li class="item">Quienes Somos</li>
+                                <li class="item">Servicios</li>
+                                <li class="item">Productos</li>
+                                <li class="item">Contacto</li>
                             </ul>
                         </nav>
                     </div>
@@ -46,14 +47,10 @@
     </header>
 
 
-
+ <!-- Slider Page -->
 
     <div class="main-slider-content">
-
-
-        
         <div class="content-wrapper"> 
-        
             <div class="slider-content">
                 <div class="slider">
                     <div class="slider__item">
@@ -77,24 +74,67 @@
  
                     <span class="jam jam-arrow-left buttons button-right"></span>
                     <span class="jam jam-arrow-right buttons button-left"></span>
-    
             </div>
-
         </div>
-
-
     </div>
 
 
     
     <!-- Main Page -->
-    <main></main>
+    <main>
+        
+        <section class="about-us-contain">
+            <div class="content-wrapper">
+                <div class="about-us">
+                    <h1 class="about-us-title">QUIENES SOMOS</h1>
+                    <div class="about-us-contain-principal">
+                        <div class="about-us-img-container">
+                            <img class="about-us-img" src="images/about-us.jpeg" alt="">
+                        </div>
+                        
+                        <p class="about-us-content">Somos una tienda musical que te ofrece un amplio catalogo de instrumentos musicales.</p>
+
+                        <a href="#" class="about-us-button">Conocer Mas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-container">
+            <div class="container-wrapper">
+                <div>
+                    <h1 class="services-title">Servicios</h1>
+
+                    <div class="services">
+                        <div class="services-item">
+                            
+                            <img class="services-img" src="images/services/service1.svg" alt="">
+                            
+                            <p>Servicio Uno</p>
+                        </div>
+
+                        <div class="services-item">
+                            <img class="services-img" src="images/services/service2.svg" alt="">
+                            <p>Servicio Dos</p>
+                        </div>
+                        <div class="services-item">
+                            <img class="services-img" src="images/services/service3.svg" alt="">
+                            <p>Servicio Tres</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
     
     <!-- Footer Page -->
     <footer></footer>
 
 
-
+ 
+    <span class="jam jam-arrow-up arrow-up"></span>
     <script src="scripts/script.js"></script>
 </body>
 </html>
