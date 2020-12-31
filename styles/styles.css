@@ -269,16 +269,6 @@ body{
       border-radius: 0.3em;
     }
 
-.arrow-up{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--black-color);
-  color: white;
-  font-size: 2.5em;
-  padding: 0.3em;
-  border-radius: 50%;
-}
 
 
 .services-container-main{
@@ -308,9 +298,12 @@ body{
     color: var(--text-color);
   }
 
+  
 
   .featured-products{
     width: 100%;
+    overflow: hidden;
+    position: relative;
   }
 
   .featured-products-title{
@@ -319,7 +312,8 @@ body{
 
   .featured-products-slider{
     display: flex;
-    overflow: hidden;
+    padding: 1em;
+    transition: 0.5s;
   }
 
 
@@ -372,4 +366,17 @@ body{
     font-size: 1.3em;
     font-weight: bold;
     margin: 0.3em;
+  }
+
+  .button-products{
+    color: var(--black-color);
+    font-size: 3em;
+    opacity: 0.8;
+    background: rgb(255, 255, 255);
+    border: 1.5px solid rgb(110, 110, 110);
+    border-radius: 50%;
+    justify-content: center;
+    height: auto;
+    top: 50%;
+    margin: 0 0.3em;
   }
