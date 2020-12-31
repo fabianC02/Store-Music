@@ -24,7 +24,7 @@ let stopSlider = setInterval(() => {
     contador++;
     contador = desplazar(items,0)
     slider.style.transform = `translateX(-${translate*contador}%)`;
-}, 2000);
+}, 2050);
 
 
 function desplazar(cant,cont){
@@ -52,63 +52,68 @@ let sliderProducts = document.querySelector('.featured-products-slider');
 let buttonrp = document.querySelector('.button-right-products');
 let buttonlp = document.querySelector('.button-left-products');
 
+
 widthItem = sliderProducts.children[0].clientWidth;
-lenItem = sliderProducts.children.length
-despl = widthItem
-contItem = 0
+lenItem = sliderProducts.children.length;
+contItem = 0;
 
-widthSlider = sliderProducts.clientWidth;
-itemView = Math.floor(widthSlider / widthItem);
 
-itemViewcont = itemView;
+function viewSlider(){
+    widthSlider = sliderProducts.clientWidth;
+    itemView = Math.floor(widthSlider / widthItem);
+    itemViewcont = lenItem - itemView;
+    itemViewcont += 1;
+}
+
+viewSlider();
+
+
+function optionButton(button,option){
+    
+    switch (option) {
+        case 'enabled':
+            button.style.opacity = `1`;
+            break;
+    
+        case 'disabled':
+            button.style.opacity = `0.4`;
+            break;
+    }
+
+}
+
 
 window.addEventListener('resize',()=>{
-    widthSlider = sliderProducts.clientWidth
-    itemView = Math.floor(widthSlider / widthItem)
-    sliderProducts.style.transform = `translateX(0)px`
+    viewSlider();
+    buttonrp.click();
 })
 
 
 buttonrp.addEventListener('click',()=>{
-    contItem++
+    
+    contItem++;
 
-    sliderProducts.style.transform = `translateX(-${widthItem*contItem}px)`;
-
-    console.log(itemViewcont)
-
-    if(itemViewcont == lenItem){
-
-        alert(`fin`)
+    if(itemViewcont <= contItem) {
+        optionButton(buttonrp,'disabled');
+        contItem = itemViewcont;
+    } else{
+        optionButton(buttonlp,'enabled');
     }
 
-
-
-   console.log(`contador es ${contItem} y la cantidad de itemview es ${itemView}`)
+    sliderProducts.style.transform = `translateX(-${widthItem*contItem}px)`;
 })
 
 buttonlp.addEventListener('click',()=>{
 
-    
-    if(contItem == 0 ) {
-        sliderProducts.style.transform = `translateX(0)px`;
+    if(contItem <= 1) {
+        optionButton(buttonlp,'disabled')
+        sliderProducts.style.transform = `translateX(0%)`;
     }else{
-        contItem--
+        optionButton(buttonrp,'enabled')
         sliderProducts.style.transform = `translateX(${widthItem - (widthItem*contItem)}px)`;
-        console.log(contItem)
+        contItem--;
     }
 
     
 })
-
-//  setInterval(() => {
-   
-//      sliderProducts.style.transform = `translateX(-${widthItem}px)`;
-//      widthItem+=despl
-//      itemView = Math.floor(widthSlider / widthItem)
-
-//      console.log(itemView)
-
-//      if(itemView == lenItem) alert('loquita')
-
-// }, 2000);
 
