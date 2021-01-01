@@ -1,20 +1,23 @@
 // navegation
-let buttonNav = document.querySelector(".nav-button")
-let nav = document.querySelector(".nav")
-let body = document.querySelector("body")
+let buttonNav = document.querySelector(".nav-button");
+let nav = document.querySelector(".nav");
+let body = document.querySelector("body");
 
 buttonNav.addEventListener('click',()=>{
-    nav.classList.toggle("nav-hidden")
+    nav.classList.toggle("nav-hidden");
+})
 
+nav.addEventListener('click',()=>{
+    buttonNav.click();
 })
 
 //slider
 
 let slider = document.querySelector('.slider');
-let btnR = document.querySelector(".button-right")
-let btnL = document.querySelector(".button-left")
+let btnR = document.querySelector(".button-right");
+let btnL = document.querySelector(".button-left");
 
-items = slider.children.length
+items = slider.children.length;
 
 let translate = 100;
 contador = 0;
@@ -22,7 +25,7 @@ contador = 0;
 
 let stopSlider = setInterval(() => {
     contador++;
-    contador = desplazar(items,0)
+    contador = desplazar(items,0);
     slider.style.transform = `translateX(-${translate*contador}%)`;
 }, 2050);
 

@@ -22,7 +22,7 @@
     <!-- Header Page -->
     <header class="main-header">
 
-            <div class="content-wrapper"> 
+            <div class="content-wrapper wrapper-desktop"> 
                     <div class="content-logo">
                         <img src="images/icon.png" alt="">
                         <h1>CLAVE DE SOL</h1>
@@ -34,11 +34,11 @@
 
                         <nav class="nav">
                             <ul class="nav-items">
-                                <li class="item">Inicio</li>
-                                <li class="item">Quienes Somos</li>
-                                <li class="item">Servicios</li>
-                                <li class="item">Productos</li>
-                                <li class="item">Contacto</li>
+                                <li class="item"> <a href="#">Inicio</a> </li>
+                                <li class="item"> <a href="#about-us">Quienes Somos</a>  </li>
+                                <li class="item"> <a href="#services">Servicios</a> </li>
+                                <li class="item"> <a href="#products">Productos</a> </li>
+                                <li class="item"> <a href="#contact">Contacto</a> </li>
                             </ul>
                         </nav>
                     </div>
@@ -83,8 +83,8 @@
     <!-- Main Page -->
     <main>
         
-        <section class="about-us-contain">
-            <div class="content-wrapper">
+        <section class="about-us-contain" id='about-us'>
+            <div class="content-wrapper wrapper-desktop">
                 <div class="about-us">
                     <h2 class="about-us-title">QUIENES SOMOS</h2>
                     <div class="about-us-contain-principal">
@@ -100,8 +100,8 @@
             </div>
         </section>
 
-        <section class="services-container">
-            <div class="content-wrapper">
+        <section class="services-container" id="services">
+            <div class="content-wrapper wrapper-desktop">
                 
                 <div class="services-container-main">
                     <h2 class="services-title">Servicios</h2>
@@ -128,9 +128,9 @@
             </div>
         </section>
 
-        <section class="featured-products-contain">
+        <section class="featured-products-contain" id="products">
             
-            <div class="content-wrapper">
+            <div class="content-wrapper wrapper-desktop">
                 <div class="featured-products">
 
                     <h2 class="featured-products-title">PRODUCTOS DESTACADOS</h2>
@@ -299,24 +299,25 @@
         <section class="container-map-ubication">
             <div class="content-wrapper">
                 <div class="map-ubication">
-                    <h2>UBICANOS EN NUESTRA TIENDA</h2>
+                    <h2 class="title-map">UBICANOS EN NUESTRA TIENDA</h2>
                        
+                    <iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=-34.591943590887276%2C%20-58.469251266994796&key=AIzaSyCcM7qcv5d5c5Qx_cL20A4fbBNmUncQqiE" allowfullscreen></iframe>
+                   
                     <section class="ubication-Item">
+
                         <article class="content-ubic-comment">
                             <p> <span class="jam jam-map-marker-f ubic"></span> <span class="ubic-comment"> Ubicacion: </span> Calle 5 av. mercedez</p>
                             <p> <span class="jam jam-language ubic"></span> <span class="ubic-comment"> Ciudad: </span> Buenos Aires</p>
                             <p> <span class="jam jam-world ubic"></span> <span class="ubic-comment"> Pais: </span> Argentina </p>
-
                         </article>
                         
-                        <iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=-34.591943590887276%2C%20-58.469251266994796&key=AIzaSyCcM7qcv5d5c5Qx_cL20A4fbBNmUncQqiE" allowfullscreen></iframe>
 
                     </section>
                 </div>
             </div>
         </section>
 
-        <section class="container-social-network">
+        <section class="container-social-network" id="contact">
                 <div class="content-wrapper">
                     <div class="social-network">
                         
@@ -329,7 +330,12 @@
                         <span class="jam jam-youtube-square"></span>
 
                         <span class="jam jam-instagram"></span>
+                    
+                    
                     </div>
+
+                   
+
                 </div>
         </section>
 
