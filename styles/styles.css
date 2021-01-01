@@ -670,20 +670,24 @@ body{
       text-align: center;
       height: 100%;
       display: flex;
+      align-items: center; 
     } 
 
   
       .item{
-        padding: 0 2em;
         height: 100%;
-        margin: auto;
-        display: flex;
+        padding: 0;
       }
 
   
       .item a{
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
         width: 100%;
-         margin: auto;
+        height: 100%;
+        padding-right: 2em;
+
       }
       
 
